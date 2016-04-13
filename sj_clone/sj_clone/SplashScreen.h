@@ -1,0 +1,29 @@
+#pragma once
+#include "SFML/Graphics.hpp"
+
+
+//////////////////////////////////////////////////
+//	Class:	SplashScreen
+//	Purpose:
+//			-for handling splash screens
+//			-WIP extensible for different images
+//////
+/////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////
+// Images to be displayed:
+// Start Screen
+// pause menu (can be same as main menu)
+// next level
+//
+////////////////////////////////////////////
+
+
+class SplashScreen{
+public:
+	////////////////////////////////
+	//DRAW
+	void Show(sf::RenderWindow& window, std::string name);
+};
