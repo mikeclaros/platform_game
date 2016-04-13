@@ -1,5 +1,7 @@
-This project was an attempt to make a clone of
-the squid jump mini-game in Splatoon.
+This project is written in C++ using
+the SFML library. The games itself is
+a clone of the squid jump mini-game from
+Splatoon.
 
 The base of the project was made by following 
 http://www.gamefromscratch.com/ SFML C++ tutorial
