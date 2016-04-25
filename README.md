@@ -1,5 +1,5 @@
 #####**Documentation** can be found here:<BR>
-[mikeclaros.github.io](mikeclaros.github.io)
+[Documentation for platform_game](http://mikeclaros.github.io/documentation/platform_game/index.html)
 
 ###### Short Description:
 This project is written in C++ using<BR>
