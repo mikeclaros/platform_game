@@ -2,8 +2,7 @@
 #include "platform.h"
 
 platform::platform() :
-_position(0, 0),
-_isColliding(false)
+_position(0, 0)
 {
 	load("images/bottom_platform.png");
 	assert(isLoaded());

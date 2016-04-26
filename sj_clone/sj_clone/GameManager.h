@@ -5,23 +5,27 @@
 
 
 /////////////////////////////////////////////////////////////////
-//	Class: GameManager
-//	Purpose:
-//		-GameLoop
-//		-Holds ObjectManagers 
-//		-Creates Main Window
-//		-Has Game States
-//
-///////////////
+///	@file GameManager.h
 /////////////////////////////////////////////////////////////////
 
 
+
+
+/////////////////////////////////////////////////////////////////
+/// @class	GameManager
+///	@brief	manages game content
+///
+///	-GameLoop
+///	-Holds ObjectManagers 
+///	-Creates Main Window
+///	-Has Game States
+///
+///
+/////////////////////////////////////////////////////////////////
 class GameManager{
 public:
 
-	////////////////////////////////
-	//	Start function 
-	//	initialization of game objects occur here
+	/// Start function
 	static void Start();
 
 
@@ -30,26 +34,86 @@ public:
 
 
 
-	////////////////////////////////
+	////////////////////////////////////////////////////////
 	//GETTERS
 
+
+	////////////////////////////////////////////
+	/// @brief		reference to window
+	/// @return		reference to sf::RenerWindow 
+	///				object
+	///
+	///	reference to window object, used to set
+	/// view of where to draw objects on
+	///	
+	////////////////////////////////////////////
 	static sf::RenderWindow& getWindow();
+
+	////////////////////////////////////////////
+	/// @brief		pointer to window
+	///	@return		pointer to sf::RenderWindow
+	///				object
+	///	optional pointer method to window
+	////////////////////////////////////////////
 	static sf::RenderWindow* ptr_getWindow();
 	
+	////////////////////////////////////////////
+	/// @brief		grabs keyboard input
+	/// @return		reference to sf::Event object
+	///
+	///	reference to Event object used for getting
+	///	input from keyboard
+	////////////////////////////////////////////
 	const static sf::Event& getInput();
 
+	////////////////////////////////////////////
+	/// @brief		reference to objectmanager
+	/// @return		a reference to ObjectManager
+	///
+	///	reference to ObjectManager, used to access
+	///	objects to draw onto window
+	////////////////////////////////////////////
 	const static ObjectManager& getObjectManager();
+
+	////////////////////////////////////////////
+	/// @brief		pointer to ObjectManager
+	/// @return		a pointer to ObjectManager
+	///
+	///	optional pointer to ObjectManager
+	////////////////////////////////////////////
 	static ObjectManager* ptr_getObjectManager();
 
+
+	////////////////////////////////////////////
+	/// @brief		reference to stageManager
+	///	@return		a reference to 
+	///				the stageObjectManager
+	///
+	///	reference to stageObjectManager for use
+	/// with platform objects
+	////////////////////////////////////////////
 	const static ObjectManager& getStageObjectManager();
+
+	////////////////////////////////////////////
+	/// @brief		description
+	///	@return		a pointer to stageObjectManager
+	///
+	///	optional pointer to stageObjectManager
+	////////////////////////////////////////////
 	static ObjectManager* ptr_getStageObjectManager();
 
+
+	//
+	////////////////////////////////////////////////////////////
 
 	////////////////////////////////
 	//SCREEN DIMENSIONS
 
-	const static int SCREEN_WIDTH = 1024;
-	const static int SCREEN_HEIGHT = 768;
+	const static int SCREEN_WIDTH = 1024;		///< Screen width
+	const static int SCREEN_HEIGHT = 768;		///< Screen height
+
+	//
+	////////////////////////////////
 
 private:
 
@@ -92,7 +156,4 @@ private:
 
 	static ObjectManager _stageObjectManager;
 	static ObjectManager* _ptrToStageObjectManager;
-
-	//static Camera _mainCamera;
-
 };

@@ -4,46 +4,61 @@
 
 
 /////////////////////////////////////////////
-//	Class: platform	
-//	purpose:
-//		h file for platform sprites
-//		inherited from VisibleObject
-/////
+///	@file platform.h
 /////////////////////////////////////////////
 
 
 
+
+/////////////////////////////////////////////
+/// @class	platform
+/// @brief	platform sprite object
+///
+/// - file for platform sprites
+/// - inherited from VisibleObject
+///
+/////////////////////////////////////////////
 class platform : public VisibleObject{
 public:
 	////////////////////////////////////
 	//constructors, desctructors
+	
+	/// Constructor
 	platform();
+	/// Destructor
 	~platform();
 
 
+	//
 	////////////////////////////////
-	//setters
 
 
-	////////////////////////////////////
-	//getters
-
-
-	////////////////////////////////////
-	//	Vertices information 
-	//	instantiated during construction
-
-	Vertices _Vertices;
-
-	////////////////////////////////////
-	// draw information
-
-	void draw(sf::RenderWindow& rw);	//draw platforms on window
 	
+
+	Vertices _Vertices;			///< Vertices information
+								/// <BR> Instantiated during construction
+
+	////////////////////////////////////
+	// DRAW 
+
+
+	////////////////////////////////////////////
+	/// @brief		draws platform in
+	///				specified window
+	/// @param[in]	rw renderwindow
+	////////////////////////////////////////////
+	void draw(sf::RenderWindow& rw);
+	
+
+	//
+	////////////////////////////////
 
 
 private:
-	sf::Vector2f _position;
-	bool _isColliding;
+	////////////////////////////////
+	//ATTRIBUTES
+
+	sf::Vector2f _position;		///< position of platform
+	//bool _isColliding;			
 	
 };

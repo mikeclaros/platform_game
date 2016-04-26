@@ -3,7 +3,13 @@
 #include <math.h>
 
 
-Camera::Camera(){
+Camera::Camera():
+_position(0.0),
+_target(0.0),
+_size(0.0),
+_speed(0.0),
+_camera()
+{
 	_camera.reset(sf::FloatRect(100, 100, 1024, 768));
 }
 

@@ -3,27 +3,34 @@
 
 
 //////////////////////////////////////////////////
-//	Class:	SplashScreen
-//	Purpose:
-//			-for handling splash screens
-//			-WIP extensible for different images
-//////
+/// @file	SplashScreen.h
 /////////////////////////////////////////////////
 
 
-
-////////////////////////////////////////////
-// Images to be displayed:
-// Start Screen
-// pause menu (can be same as main menu)
-// next level
-//
-////////////////////////////////////////////
-
-
+//////////////////////////////////////////////////
+/// @class SplashScreen
+/// @brief displays screen items
+///
+///	for handling splash screens
+/// <BR> WIP extensible for different images
+///	<BR>
+/// Images to be displayed:
+/// - Start Screen
+/// - pause menu (can be same as main menu)
+/// - next level
+/////////////////////////////////////////////////
 class SplashScreen{
 public:
 	////////////////////////////////
 	//DRAW
+
+	////////////////////////////////////////////
+	/// @brief		show splash screen
+	///	@param[in]	window current render window
+	/// @param[in]	name Name of splash image
+	////////////////////////////////////////////
 	void Show(sf::RenderWindow& window, std::string name);
+
+	//
+	////////////////////////////////
 };
